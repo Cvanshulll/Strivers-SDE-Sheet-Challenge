@@ -3,7 +3,7 @@
 void setZeros(vector<vector<int>> &matrix)
 {
   
-//    BRTUE FORCE -> IF([I][J]==0) CHANGE ALL TO -1 EXCEPT Os
+//    BRTUE FORCE -> IF([I][J]==0) CHANGE ALL TO -1 EXCEPT Os -----------> TC: O((N*M)*(N + M)) + O(N*M) || SC:0(1)
 	int n = matrix.size();
 	int m = matrix[0].size();
 	vector<vector<int>>v(n, vector<int>(m, -1));
@@ -32,7 +32,7 @@ void setZeros(vector<vector<int>> &matrix)
         }
     }
 	
-// 	 Better Approach -> use extra row and col vector
+// 	 Better Approach -> use extra row and col vector ------------> TC: O(2*(N*M))|| SC: O(N) + O(M)
 	int n = matrix.size();
 	int m = matrix[0].size();
 	vector<int>row(n, -1);
